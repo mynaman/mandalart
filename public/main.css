@@ -1,0 +1,18 @@
+#wrap {        
+    text-align : center;    
+}
+
+/* #wrap .tables {
+    display : inline-block;
+    border : 1px solid red;
+} */
+
+#wrap .col {
+    float : left;
+}
+
+.col .subject .tables .tbl {    
+    border : 1px solid blue;
+    width : 200px;
+    height : 200px;
+}
