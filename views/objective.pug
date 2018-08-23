@@ -2,6 +2,33 @@ extends layout
 
 block content
 
-    div= name
-    div= age
-    div= add
+    div#wrap
+            div.col
+                div.subject
+                    span.tables
+                        table.tbl
+                            tr
+                                td 
+                                  input(type='text' name='obj1_1')
+                                td
+                                  input(type='text' name='obj1_2')
+                                td
+                                  input(type='text' name='obj1_3')
+                            tr
+                                td 
+                                  input(type='text' name='obj1_4')
+                                td
+                                  input(type='text' name='obj1_subject')
+                                td
+                                  input(type='text' name='obj1_5')
+                            tr
+                                td 
+                                  input(type='text' name='obj1_6')
+                                td
+                                  input(type='text' name='obj1_7')
+                                td
+                                  input(type='text' name='obj1_8')
+
+        div
+            button#init 초기화
+            button#btn(type='submit') 저장
