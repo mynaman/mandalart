@@ -2,7 +2,8 @@ extends layout
 
 block content
 
-    div#wrap
+    form#target-form(action='/objective' method='post')
+        div#wrap
             div.col
                 div.subject
                     span.tables
@@ -31,4 +32,17 @@ block content
 
         div
             button#init 초기화
-            button#btn(type='submit') 저장
+            button#btn-submit(type='submit') 저장  
+
+  script.
+    document.getElementById('init').addEventListener('click', (e)=>{
+    e.preventDefault();
+    
+    let list = document.getElementsByTagName('input');    
+    [].forEach.call(list, (tag) => tag.value = '')
+    
+    });
+
+
+    
+        
