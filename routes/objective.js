@@ -23,9 +23,6 @@ router.get('/:id/modify', (req, res) =>{
                     });
 });
 
-
-
-
 router.get('/:id', (req, res) =>{    
     const id = parseInt(req.params.id, 10);
     if(Number.isNaN(id)) return res.send('Not Date');
