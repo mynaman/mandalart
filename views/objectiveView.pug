@@ -2,37 +2,132 @@ extends layout
 
 block content
     
-        div#wrap
-            div.col
-                div.subject
-                    span.tables
-                        table.tbl
-                            tr
-                                td 
-                                  lable= row.obj1_1
-                                td
-                                  lable= row.obj1_2
-                                td
-                                  lable= row.obj1_3
-                            tr
-                                td 
-                                  lable= row.obj1_4
-                                td
-                                  lable= row.obj1_subject
-                                td
-                                  lable= row.obj1_5
-                            tr
-                                td 
-                                  lable= row.obj1_6
-                                td
-                                  lable= row.obj1_7
-                                td
-                                  lable= row.obj1_8
-        -const planId= row.id
-        div
-          button
-            a(href='/') 새 plan
-          button
-            a(href='/objective/'+planId+'/modify') 수정하기
-          
-        
+  div.wild
+    div.wild-row.top
+      div.tbl
+        div.row
+          span.border 실행계획1
+          span.border 실행계획2
+          span.border 실행계획3
+        div.row
+          span.border 실행계획8
+          span.border.idea 아이디어1
+          span.border 실행계획4
+        div.row
+          span.border 실행계획7
+          span.border 실행계획6
+          span#top-left-arrow.border 실행계획5
+      
+      div.tbl
+        div.row
+          span.border 실행계획1
+          span.border 실행계획2
+          span.border 실행계획3
+        div.row
+          span.border 실행계획8
+          span.border.idea 아이디어2
+          span.border 실행계획4
+        div.row
+          span.border 실행계획7
+          span#top-arrow.border 실행계획6
+          span.border 실행계획5
+
+      div.tbl
+        div.row
+          span.border 실행계획1
+          span.border 실행계획2
+          span.border 실행계획3
+        div.row
+          span.border 실행계획8
+          span.border.idea 아이디어3
+          span.border 실행계획4
+        div.row
+          span#top-right-arrow.border 실행계획7
+          span.border 실행계획6
+          span.border 실행계획5
+
+    div.wild-row.middle
+      div.tbl
+        div.row
+          span.border 실행계획1
+          span.border 실행계획2
+          span.border 실행계획3
+        div.row
+          span.border 실행계획8
+          span.border.idea 아이디어8
+          span#left-arrow.border 실행계획4
+        div.row
+          span.border 실행계획7
+          span.border 실행계획6
+          span.border 실행계획5
+      
+      div.tbl
+        div.row
+          span.border 아이디어1
+          span.border 아이디어2
+          span.border 아이디어3
+        div.row
+          span.border 아이디어8
+          span.border.target 목 표
+          span.border 아이디어4
+        div.row
+          span.border 아이디어7
+          span#top-arrow.border 아이디어6
+          span.border 아이디어5
+
+      div.tbl
+        div.row
+          span.border 실행계획1
+          span.border 실행계획2
+          span.border 실행계획3
+        div.row
+          span#right-arrow .border 실행계획8
+          span.border.idea 아이디어4
+          span.border 실행계획4
+        div.row
+          span#top-right-arrow.border 실행계획7
+          span.border 실행계획6
+          span.border 실행계획5
+
+    div.wild-row.bottom
+      div.tbl
+        div.row
+          span.border 실행계획1
+          span.border 실행계획2
+          span#bottom-left-arrow.border 실행계획3
+        div.row
+          span.border 실행계획8
+          span.border.idea 아이디어5
+          span.border 실행계획4
+        div.row
+          span.border 실행계획7
+          span.border 실행계획6
+          span#top-left-arrow.border 실행계획5
+      
+      div.tbl
+        div.row
+          span.border 실행계획1
+          span#bottom-arrow.border 실행계획2
+          span.border 실행계획3
+        div.row
+          span.border 실행계획8
+          span.border.idea 아이디어6
+          span.border 실행계획4
+        div.row
+          span.border 실행계획7
+          span.border 실행계획6
+          span.border 실행계획5
+
+      div.tbl
+        div.row
+          span#bottom-right-arrow.border 실행계획1
+          span.border 실행계획2
+          span.border 실행계획3
+        div.row
+          span.border 실행계획8
+          span.border.idea 아이디어7
+          span.border 실행계획4
+        div.row
+          span.border 실행계획7
+          span.border 실행계획6
+          span.border 실행계획5

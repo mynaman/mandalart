@@ -34,14 +34,13 @@ block content
             button#init 초기화
             button#btn-submit(type='submit') 저장  
 
-  script.
-    document.getElementById('init').addEventListener('click', (e)=>{
-    e.preventDefault();
-    
-    let list = document.getElementsByTagName('input');    
-    [].forEach.call(list, (tag) => tag.value = '')
-    
-    });
+    script.
+      document.getElementById('init').addEventListener('click', (e)=>{
+        e.preventDefault();
+        
+        let list = document.getElementsByTagName('input');    
+        [].forEach.call(list, (tag) => tag.value = '')    
+      });
 
 
     
