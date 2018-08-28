@@ -11,6 +11,41 @@ html
         script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')            
 
     body
+        header
+         div#head
+            h1 Mandalart
+            ul
+              li
+                a#sign-in(href='#') Sign in
+              li
+                a#sign-up(href='#') Sign up
+
+            div#sign-in-popup
+                form(action='/auth/login' method='post')
+                    fieldset
+                        legend  Mandalart Login
+                        label Email :
+                            input(type='email' name='email')
+                        br
+                        label Password :
+                            input(type='password' name='password'  autocomplete='off')
+                        br
+                        button#login(type='submit') login
+                        button.close close
+            
+            div#sign-up-popup
+                form(action='/auth/join' method='post')
+                    fieldset
+                        legend Mandalart Join
+                        label Email :
+                            input(type='email' name='email')
+                        br
+                        label Password :
+                            input(type='password' name='password'  autocomplete='off')
+                        br
+                        button#join(type='submit') join
+                        button.close close
+
         block content
 
 

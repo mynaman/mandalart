@@ -67,13 +67,17 @@
             position :absolute;            
             width : inherit;
             top : 50px;
-            right : 0px;
-            
+            right : 0px;            
         }
 
         #sign-in-popup form fieldset, #sign-up-popup form fieldset{            
             padding-left : 5;
             background-color : #988989;            
+        }
+
+        legend {
+            font-size : 18px;
+            font-weight: bold;
         }
 
         label {
@@ -107,11 +111,11 @@
 
 
             <div id='sign-in-popup'>
-                <form>
+                <form action='/auth/login' method='post'>
                     <fieldset>
                         <legend>Mandalart Login</legend>                    
-                        <label>Email: <input type='text' name='email'></label><br>                        
-                        <label>Password: <input type='text' name='password'></label><br>
+                        <label>Email: <input type='email' name='email'></label><br>                        
+                        <label>Password: <input type='password' name='password'></label><br>
                         <button id='login' type='submit'>login</button>
                         <button class='close'>close</button>
                     </fieldset>
@@ -120,11 +124,11 @@
 
 
             <div id='sign-up-popup'>
-                <form>
+                <form action='/auth/join' method='post'>
                     <fieldset>
                         <legend>Mandalart Join</legend>                    
-                        <label>Email: <input type='text' name='email'></label><br>                        
-                        <label>Password: <input type='text' name='password'></label><br>
+                        <label>Email: <input type='email' name='email'></label><br>                        
+                        <label>Password: <input type='password' name='password'></label><br>
                         <button id='join' type='submit'>join</button>
                         <button class='close'>close</button>
                     </fieldset>

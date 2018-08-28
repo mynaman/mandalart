@@ -213,18 +213,28 @@ block content
         button#submit(type='submit') 저장
 
   script.
-    $(document).ready(() =>{
-          [].forEach.call($("input.idea"), (el) =>{
-              $(el).keyup((event) => {                    
-                  let val = $(event.target).val();                    
-                  let arr = $("input[name="+event.target.name+"]");                    
-                  arr.map((idx) => arr[idx].value = val );                   
-              })
-          });            
-
-          $('#init').click((evt)=> {
+    $(document).ready(() =>{            
+                        
+            [].forEach.call($("input.idea"), (el) =>{                
+                $(el).keyup((event) => {                    
+                    let val = $(event.target).val();                    
+                    let arr = $("input[name="+event.target.name+"]");                    
+                    arr.map((idx) => arr[idx].value = val );                   
+                })
+            });
+            
+            $('#init').click((evt)=> {
                 evt.preventDefault();
                 let arr = $('input');
                 arr.map((idx) => arr[idx].value = '');
             });
-      });
+            
+            $('#sign-in').click(() => { $('#sign-up-popup').hide(); $('#sign-in-popup').toggle(); });
+            $('#sign-up').click(() => { $('#sign-in-popup').hide(); $('#sign-up-popup').toggle(); });  
+
+            $('.close').click((evt) => {
+                evt.preventDefault();
+                $('#sign-in-popup').hide();
+                $('#sign-up-popup').hide();
+            });
+        });

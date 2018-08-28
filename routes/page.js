@@ -1,9 +1,22 @@
 const express = require('express');
+const { isLoggedIn, isNotLoggedIn } = require('./middlewares');
 
 const router = express.Router();
 
 router.get('/', (req, res) => {
-     res.render('objectiveEdit', {});
+    
+    console.log('base');    
+     res.render('objectiveEdit', {
+         user : req.user,
+         loginError : req.flash('loginError'),
+     });
 });
+
+// router.get('/join', isNotLoggedIn, (req, rese) => {
+//     res.render('')
+// })
+
+
+
 
 module.exports = router;
