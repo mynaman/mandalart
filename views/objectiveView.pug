@@ -6,7 +6,7 @@ block content
     div.wild-row.top
       div.tbl
         div.row
-          span.border 가나다라마바사카타하
+          span.border= row.plan1_1
           span.border= row.plan1_2
           span.border= row.plan1_3
         div.row
@@ -131,3 +131,6 @@ block content
           span.border=row.plan5_7
           span.border=row.plan5_6
           span.border=row.plan5_5
+
+    -const id = row .obj_id
+    a#modify.btn(href='/objective/'+ id +'/modify') 수정

@@ -14,7 +14,7 @@
 #wild{
     margin : 0 auto;
     width : 800px;      
-    height : 900px;
+    height : 760px;
 }
 
 .wild-row {
@@ -89,7 +89,7 @@ input{
     box-sizing : border-box;
     padding : 0;
     width  : 87px;
-    height : 100px;            
+    height : 80px;            
     border : 0;
 }
 

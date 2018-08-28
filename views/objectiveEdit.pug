@@ -2,218 +2,229 @@ extends layout
 
 block content
 
-  div#wild
-    div.wild-row.top
-      div.tbl
-        div.row
-          span
-            input(type='text' name='plan1_1' placeholder='실행계획1')
-          span
-            input(type='text' name='plan1_2' placeholder='실행계획2')
-          span
-            input(type='text' name='plan1_3' placeholder='실행계획3')
-        div.row
-          span
-            input(type='text' name='plan1_8' placeholder='실행계획8')
-          span
-            input.idea(type='text' name='idea1' placeholder='아이디어1')
-          span
-            input(type='text' name='plan1_4' placeholder='실행계획4')
-        div.row
-          span
-            input(type='text' name='plan1_7' placeholder='실행계획7')
-          span
-            input(type='text' name='plan1_6' placeholder='실행계획6')
-          span
-            input#top-left-arrow(type='text' name='plan1_5' placeholder='실행계획5')      
-      div.tbl
-        div.row
-          span
-            input(type='text' name='plan2_1' placeholder='실행계획1')
-          span
-            input(type='text' name='plan2_2' placeholder='실행계획2')
-          span
-            input(type='text' name='plan2_3' placeholder='실행계획3')
-        div.row
-          span
-            input(type='text' name='plan2_8' placeholder='실행계획8')
-          span
-            input.idea(type='text' name='idea2' placeholder='아이디어2')
-          span
-            input(type='text' name='plan2_4' placeholder='실행계획4')
-        div.row
-          span
-            input(type='text' name='plan2_7' placeholder='실행계획7')
-          span
-            input#top-arrow(type='text' name='plan2_6' placeholder='실행계획6')
-          span
-            input(type='text' name='plan2_5' placeholder='실행계획5')    
-      div.tbl
-        div.row
-          span
-            input(type='text' name='plan3_1' placeholder='실행계획1')
-          span
-            input(type='text' name='plan3_2' placeholder='실행계획2')
-          span
-            input(type='text' name='plan3_3' placeholder='실행계획3')
-        div.row
-          span
-            input(type='text' name='plan3_8' placeholder='실행계획8')
-          span
-            input.idea(type='text' name='idea3' placeholder='아이디어3')
-          span
-            input(type='text' name='plan3_4' placeholder='실행계획4')
-        div.row
-          span
-            input#top-right-arrow(type='text' name='plan3_7' placeholder='실행계획7')
-          span
-            input(type='text' name='plan3_6' placeholder='실행계획6')
-          span
-            input(type='text' name='plan3_5' placeholder='실행계획5')
+  form(action='/objective' method='post')
+    div#wild
+      div.wild-row.top
+        div.tbl
+          div.row
+            span
+              input(type='text' name='plan1_1' placeholder='실행계획1')
+            span
+              input(type='text' name='plan1_2' placeholder='실행계획2')
+            span
+              input(type='text' name='plan1_3' placeholder='실행계획3')
+          div.row
+            span
+              input(type='text' name='plan1_8' placeholder='실행계획8')
+            span
+              input.idea(type='text' name='idea1' placeholder='아이디어1')
+            span
+              input(type='text' name='plan1_4' placeholder='실행계획4')
+          div.row
+            span
+              input(type='text' name='plan1_7' placeholder='실행계획7')
+            span
+              input(type='text' name='plan1_6' placeholder='실행계획6')
+            span
+              input#top-left-arrow(type='text' name='plan1_5' placeholder='실행계획5')      
+        div.tbl
+          div.row
+            span
+              input(type='text' name='plan2_1' placeholder='실행계획1')
+            span
+              input(type='text' name='plan2_2' placeholder='실행계획2')
+            span
+              input(type='text' name='plan2_3' placeholder='실행계획3')
+          div.row
+            span
+              input(type='text' name='plan2_8' placeholder='실행계획8')
+            span
+              input.idea(type='text' name='idea2' placeholder='아이디어2')
+            span
+              input(type='text' name='plan2_4' placeholder='실행계획4')
+          div.row
+            span
+              input(type='text' name='plan2_7' placeholder='실행계획7')
+            span
+              input#top-arrow(type='text' name='plan2_6' placeholder='실행계획6')
+            span
+              input(type='text' name='plan2_5' placeholder='실행계획5')    
+        div.tbl
+          div.row
+            span
+              input(type='text' name='plan3_1' placeholder='실행계획1')
+            span
+              input(type='text' name='plan3_2' placeholder='실행계획2')
+            span
+              input(type='text' name='plan3_3' placeholder='실행계획3')
+          div.row
+            span
+              input(type='text' name='plan3_8' placeholder='실행계획8')
+            span
+              input.idea(type='text' name='idea3' placeholder='아이디어3')
+            span
+              input(type='text' name='plan3_4' placeholder='실행계획4')
+          div.row
+            span
+              input#top-right-arrow(type='text' name='plan3_7' placeholder='실행계획7')
+            span
+              input(type='text' name='plan3_6' placeholder='실행계획6')
+            span
+              input(type='text' name='plan3_5' placeholder='실행계획5')
 
-    div.wild-row.middle
-      div.tbl
-        div.row
-          span
-            input(type='text' name='plan8_1' placeholder='실행계획1')
-          span
-            input(type='text' name='plan8_2' placeholder='실행계획2')
-          span
-            input(type='text' name='plan8_3' placeholder='실행계획3')
-        div.row
-          span
-            input(type='text' name='plan8_8' placeholder='실행계획8')
-          span
-            input.idea(type='text' name='idea8' placeholder='아이디어8')
-          span
-            input#left-arrow(type='text' name='plan8_4' placeholder='실행계획4')
-        div.row
-          span
-            input(type='text' name='plan8_7' placeholder='실행계획7')
-          span
-            input(type='text' name='plan8_6' placeholder='실행계획6')
-          span
-            input(type='text' name='plan8_5' placeholder='실행계획5')
-      div.tbl
-        div.row
-          span
-            input.idea(type='text' name='idea1' placeholder='아이디어1')
-          span
-            input.idea(type='text' name='idea2' placeholder='아이디어2')
-          span
-            input.idea(type='text' name='idea3' placeholder='아이디어3')
-        div.row
-          span
-            input.idea(type='text' name='idea8' placeholder='아이디어8')
-          span
-            input.target(type='text' name='target' placeholder='목 표')
-          span
-            input.idea(type='text' name='idea4' placeholder='아이디어4')
-        div.row
-          span
-            input.idea(type='text' name='idea7' placeholder='아이디어7')
-          span
-            input.idea(type='text' name='idea6' placeholder='아이디어6')
-          span
-            input.idea(type='text' name='idea5' placeholder='아이디어5')
-      div.tbl
-        div.row
-          span
-            input#right-arrow(type='text' name='plan4_1' placeholder='실행계획1')
-          span
-            input(type='text' name='plan4_2' placeholder='실행계획2')
-          span
-            input(type='text' name='plan4_3' placeholder='실행계획3')
-        div.row
-          span
-            input(type='text' name='plan4_8' placeholder='실행계획8')
-          span
-            input.idea(type='text' name='idea4' placeholder='아이디어4')
-          span
-            input(type='text' name='plan4_4' placeholder='실행계획4')
-        div.row
-          span
-            input(type='text' name='plan4_7' placeholder='실행계획7')
-          span
-            input(type='text' name='plan4_6' placeholder='실행계획6')
-          span
-            input(type='text' name='plan4_5' placeholder='실행계획5')
+      div.wild-row.middle
+        div.tbl
+          div.row
+            span
+              input(type='text' name='plan8_1' placeholder='실행계획1')
+            span
+              input(type='text' name='plan8_2' placeholder='실행계획2')
+            span
+              input(type='text' name='plan8_3' placeholder='실행계획3')
+          div.row
+            span
+              input(type='text' name='plan8_8' placeholder='실행계획8')
+            span
+              input.idea(type='text' name='idea8' placeholder='아이디어8')
+            span
+              input#left-arrow(type='text' name='plan8_4' placeholder='실행계획4')
+          div.row
+            span
+              input(type='text' name='plan8_7' placeholder='실행계획7')
+            span
+              input(type='text' name='plan8_6' placeholder='실행계획6')
+            span
+              input(type='text' name='plan8_5' placeholder='실행계획5')
+        div.tbl
+          div.row
+            span
+              input.idea(type='text' name='idea1' placeholder='아이디어1')
+            span
+              input.idea(type='text' name='idea2' placeholder='아이디어2')
+            span
+              input.idea(type='text' name='idea3' placeholder='아이디어3')
+          div.row
+            span
+              input.idea(type='text' name='idea8' placeholder='아이디어8')
+            span
+              input.target(type='text' name='target' placeholder='목 표')
+            span
+              input.idea(type='text' name='idea4' placeholder='아이디어4')
+          div.row
+            span
+              input.idea(type='text' name='idea7' placeholder='아이디어7')
+            span
+              input.idea(type='text' name='idea6' placeholder='아이디어6')
+            span
+              input.idea(type='text' name='idea5' placeholder='아이디어5')
+        div.tbl
+          div.row
+            span
+              input#right-arrow(type='text' name='plan4_1' placeholder='실행계획1')
+            span
+              input(type='text' name='plan4_2' placeholder='실행계획2')
+            span
+              input(type='text' name='plan4_3' placeholder='실행계획3')
+          div.row
+            span
+              input(type='text' name='plan4_8' placeholder='실행계획8')
+            span
+              input.idea(type='text' name='idea4' placeholder='아이디어4')
+            span
+              input(type='text' name='plan4_4' placeholder='실행계획4')
+          div.row
+            span
+              input(type='text' name='plan4_7' placeholder='실행계획7')
+            span
+              input(type='text' name='plan4_6' placeholder='실행계획6')
+            span
+              input(type='text' name='plan4_5' placeholder='실행계획5')
 
-    div.wild-row.bottom
-      div.tbl
-        div.row
-          span
-            input(type='text' name='plan7_1' placeholder='실행계획1')
-          span
-            input(type='text' name='plan7_2' placeholder='실행계획2')
-          span
-            input#bottom-left-arrow(type='text' name='plan7_3' placeholder='실행계획3')
-        div.row
-          span
-            input(type='text' name='plan7_8' placeholder='실행계획8')
-          span
-            input.idea(type='text' name='idea7' placeholder='아이디어7')
-          span
-            input(type='text' name='plan7_4' placeholder='실행계획4')
-        div.row
-          span
-            input(type='text' name='plan7_7' placeholder='실행계획7')
-          span
-            input(type='text' name='plan7_6' placeholder='실행계획6')
-          span
-            input(type='text' name='plan7_5' placeholder='실행계획6')
-      div.tbl
-        div.row
-          span
-            input(type='text' name='plan6_1' placeholder='실행계획1')
-          span
-            input#bottom-arrow(type='text' name='plan6_2' placeholder='실행계획2')
-          span
-            input(type='text' name='plan6_3' placeholder='실행계획3')
-        div.row
-          span
-            input(type='text' name='plan6_8' placeholder='실행계획8')
-          span
-            input.idea(type='text' name='idea6' placeholder='아이디어6')
-          span
-            input(type='text' name='plan6_4' placeholder='실행계획4')
-        div.row
-          span
-            input(type='text' name='plan6_7' placeholder='실행계획7')
-          span
-            input(type='text' name='plan6_6' placeholder='실행계획6')    
-          span
-            input(type='text' name='plan6_5' placeholder='실행계획5')    
-      div.tbl
-        div.row
-          span
-            input#bottom-right-arrow(type='text' name='plan5_1' placeholder='실행계획1')
-          span
-            input(type='text' name='plan5_2' placeholder='실행계획2')
-          span
-            input(type='text' name='plan5_3' placeholder='실행계획3')
-        div.row
-          span
-            input(type='text' name='plan5_8' placeholder='실행계획8')
-          span
-            input.idea(type='text' name='idea5' placeholder='아이디어5')
-          span
-            input(type='text' name='plan5_4' placeholder='실행계획5')
-        div.row
-          span
-            input(type='text' name='plan5_6' placeholder='실행계획7')
-          span
-            input(type='text' name='plan5_6' placeholder='실행계획6')
-          span
-            input(type='text' name='plan5_5' placeholder='실행계획5')
+      div.wild-row.bottom
+        div.tbl
+          div.row
+            span
+              input(type='text' name='plan7_1' placeholder='실행계획1')
+            span
+              input(type='text' name='plan7_2' placeholder='실행계획2')
+            span
+              input#bottom-left-arrow(type='text' name='plan7_3' placeholder='실행계획3')
+          div.row
+            span
+              input(type='text' name='plan7_8' placeholder='실행계획8')
+            span
+              input.idea(type='text' name='idea7' placeholder='아이디어7')
+            span
+              input(type='text' name='plan7_4' placeholder='실행계획4')
+          div.row
+            span
+              input(type='text' name='plan7_7' placeholder='실행계획7')
+            span
+              input(type='text' name='plan7_6' placeholder='실행계획6')
+            span
+              input(type='text' name='plan7_5' placeholder='실행계획6')
+        div.tbl
+          div.row
+            span
+              input(type='text' name='plan6_1' placeholder='실행계획1')
+            span
+              input#bottom-arrow(type='text' name='plan6_2' placeholder='실행계획2')
+            span
+              input(type='text' name='plan6_3' placeholder='실행계획3')
+          div.row
+            span
+              input(type='text' name='plan6_8' placeholder='실행계획8')
+            span
+              input.idea(type='text' name='idea6' placeholder='아이디어6')
+            span
+              input(type='text' name='plan6_4' placeholder='실행계획4')
+          div.row
+            span
+              input(type='text' name='plan6_7' placeholder='실행계획7')
+            span
+              input(type='text' name='plan6_6' placeholder='실행계획6')    
+            span
+              input(type='text' name='plan6_5' placeholder='실행계획5')    
+        div.tbl
+          div.row
+            span
+              input#bottom-right-arrow(type='text' name='plan5_1' placeholder='실행계획1')
+            span
+              input(type='text' name='plan5_2' placeholder='실행계획2')
+            span
+              input(type='text' name='plan5_3' placeholder='실행계획3')
+          div.row
+            span
+              input(type='text' name='plan5_8' placeholder='실행계획8')
+            span
+              input.idea(type='text' name='idea5' placeholder='아이디어5')
+            span
+              input(type='text' name='plan5_4' placeholder='실행계획5')
+          div.row
+            span
+              input(type='text' name='plan5_6' placeholder='실행계획7')
+            span
+              input(type='text' name='plan5_6' placeholder='실행계획6')
+            span
+              input(type='text' name='plan5_5' placeholder='실행계획5')
+      
+      div#btn-list
+        button#init 초기화
+        button#submit(type='submit') 저장
 
   script.
-    $(document).ready(() =>{                                    
-          [].forEach.call($("input.idea"), (el) =>{                
+    $(document).ready(() =>{
+          [].forEach.call($("input.idea"), (el) =>{
               $(el).keyup((event) => {                    
                   let val = $(event.target).val();                    
                   let arr = $("input[name="+event.target.name+"]");                    
                   arr.map((idx) => arr[idx].value = val );                   
               })
           });            
+
+          $('#init').click((evt)=> {
+                evt.preventDefault();
+                let arr = $('input');
+                arr.map((idx) => arr[idx].value = '');
+            });
       });
