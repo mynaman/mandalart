@@ -13,7 +13,7 @@
 
 #wild{
     margin : 0 auto;
-    width : 800px;      
+    width : 812px;      
     height : 760px;
 }
 
@@ -49,15 +49,15 @@
     border-bottom : 0;
 }
 
-.tbl .row {
+.tbl .row { 
     display : flex;
 }
 
 .tbl .row .border {
     display : inline-block; 
     box-sizing:border-box;
-    width : 87px;
-    height : 87px;    
+    width : 89.5px;
+    height : 88px;    
     padding-top: 35px;
 }         
 
@@ -87,35 +87,53 @@
 input{
     box-sizing : border-box;
     padding : 0;
-    width  : 87px;
-    height : 87px;            
+    width  : 88px;
+    height : 88px;            
     border : 0;
 }
+
+/* input:nth-child(odd) {
+    border-left : 1px solid #bdadb1;
+    border-right : 1px solid #bdadb1;    
+} */
 
 input.idea{
     background-color : #DCDCDC;
 }
 
 .tbl .row span:nth-child(even) {
-    border-left : 1px solid #bdadb1;
-    border-right : 1px solid #bdadb1;
+    border-left : 2px solid #bdadb1;
+    border-right : 2px solid #bdadb1;
 }
 
 #btn-list{
-    margin-top : 20px;
+    margin-top : 10px;
     text-align : center;
 }
 
-#btn-list #init, #submit {
+#btn-list #init, #submit, #modify {
     margin-left : 5px;
     width : 100px;
     height : 30px;           
 }
 
+#modify {    
+    padding : 0;
+}
+
+#modify a {
+    display : inline-block;
+    box-sizing : border-box;
+    line-height : 25px;
+    height : 100%;
+    width : 100%;
+    text-decoration: none;
+    color : #000;
+}
+
 header{
     margin : 0 auto;
-    width : 800px;
-    margin-bottom : 30px;
+    width : 800px;   
 }
 
 #head {
@@ -152,6 +170,15 @@ ul li a {
 ul li a:hover {
     color : blue;
 }
+
+#desc {
+    margin-bottom : 10px;
+}
+
+#desc p{
+    margin : 0;
+}
+
 
 #sign-in-popup, #sign-up-popup {
     display : none;

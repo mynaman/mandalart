@@ -15,7 +15,7 @@ router.get('/:id', (req, res) =>{
                             if(!row) res.send('Not row!');                            
                             return res.render('objectiveView', {row : row.get() , user : req.user });
                         })
-                        .catch((err) => {
+                        .catch((err) => { 
                             console.error(err);
                             return err;
                         });
@@ -29,7 +29,7 @@ router.get('/:id/modify', (req, res) =>{
     if(obj_id) {
         Objective.findOne({ where: {obj_id} }).then((row) =>{
                             if(!row) res.send('Not row!');                            
-                            return res.render('objectiveModify', {row : row.get() });
+                            return res.render('objectiveModify', {row : row.get(),  user : req.user });
                         })
                         .catch((err) => {
                             console.error(err);
@@ -66,6 +66,3 @@ router.post('/:id', (req, res) => {
 });
 
 module.exports = router;
-
-
-

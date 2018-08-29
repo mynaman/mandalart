@@ -30,7 +30,7 @@ html
                     fieldset
                         legend  Mandalart Login
                         label Email :
-                            input(type='email' name='email')
+                            input(type='email' name='email' autocomplete='off')
                         br
                         label Password :
                             input(type='password' name='password')
@@ -45,7 +45,7 @@ html
                     fieldset
                         legend Mandalart Join
                         label Email :
-                            input(type='email' name='email')
+                            input(type='email' name='email' autocomplete='off')
                         br
                         label Password:
                             input(type='password' name='password')
@@ -58,10 +58,14 @@ html
                         button#join(type='submit') join
                         button.close close
 
-            
+        section#desc
+            p 만다라트 훈련 기법 입니다. 
+             a(href='https://youtu.be/gmV35b_72j0' target='_blank') 영상-만다라트        
+            p 완성도 있는 만다라트 서비스가 되도록 꾸준히 업데이트 하겠습니다          
+           
         script.
-            $('#join').click((evt)=>{
-                
+            $('#join').click((evt)=>{                
+
                 if(!$('#sign-up-popup input[name=email]').val()){
                     evt.preventDefault();
                     alert('아이디를 입력 해 주세요.');
@@ -78,13 +82,21 @@ html
                     evt.preventDefault();
                     alert('비밀번호가 맞지 않습니다.');
                 }
+            });
 
+            $('#login').click((evt)=>{                
+                
+                if(!$('#sign-in-popup input[name=email]').val()){
+                    evt.preventDefault();
+                    alert('아이디를 입력 해 주세요.');
+                }
+                else if(!$('#sign-in-popup input[name=password]').val()){
+                    evt.preventDefault();
+                    alert('비밀번호를 입력해주세요.');
+                }                
             });
 
         block content
 
 
     footer
-
-    
-        

@@ -132,5 +132,8 @@ block content
           span.border=row.plan5_6
           span.border=row.plan5_5
 
-    -const id = row .obj_id
-    a#modify.btn(href='/objective/'+ id +'/modify') 수정
+    -const id = row.obj_id
+    div#btn-list
+      button#modify 
+        a(href='/objective/'+ id +'/modify') 수정
+    

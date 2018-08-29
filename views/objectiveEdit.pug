@@ -162,7 +162,7 @@ block content
             span
               input(type='text' name='plan7_6' placeholder='실행계획6')
             span
-              input(type='text' name='plan7_5' placeholder='실행계획6')
+              input(type='text' name='plan7_5' placeholder='실행계획5')
         div.tbl
           div.row
             span
@@ -199,7 +199,7 @@ block content
             span
               input.idea(type='text' name='idea5' placeholder='아이디어5')
             span
-              input(type='text' name='plan5_4' placeholder='실행계획5')
+              input(type='text' name='plan5_4' placeholder='실행계획4')
           div.row
             span
               input(type='text' name='plan5_7' placeholder='실행계획7')
@@ -224,6 +224,15 @@ block content
                     let val = $(event.target).val();                    
                     let arr = $("input[name="+event.target.name+"]");                    
                     arr.map((idx) => arr[idx].value = val );                   
+                })
+            });
+
+            [].forEach.call($("input:text"), (el) =>{
+                $(el).attr('autocomplete', 'off');
+                $(el).keydown((evt) => {                    
+                    if(evt.keyCode == 13){
+                      return false;
+                    }
                 })
             });
             

@@ -2,7 +2,7 @@ const express = require('express');
 const passport = require('passport');
 const bcrypt = require('bcrypt');
 const { isLoggedIn, isNotLoggedIn } = require('./middlewares');
-const { User } = require('../models');
+const { User, Objective } = require('../models');
 
 const router = express.Router();
 
@@ -47,8 +47,22 @@ router.post('/login', isNotLoggedIn , (req, res, next) =>{
             if(loginError){
                 console.error(loginError);
                 return next(loginError);
-            }
-            return res.redirect('/');
+            }            
+            const email = user.email;            
+            Objective.findOne({where : {user_id :email}}).then((row) =>{
+                if(row){                    
+                    const obj_id = row.get().obj_id;
+                    return res.redirect(`/objective/${obj_id}`);                    
+                } else {
+                    return res.redirect('/');
+                }
+
+            })
+            .catch((err) => {
+                console.error(err);
+                return err;
+            });
+            
         });
     })(req, res, next);
 });

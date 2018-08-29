@@ -154,7 +154,7 @@ block content
             span
               input(type='text' name='plan7_8' placeholder='실행계획8' value=row.plan7_8)
             span
-              input.idea(type='text' name='idea7' placeholder='아이디어7' value=row.plan7_7)
+              input.idea(type='text' name='idea7' placeholder='아이디어7' value=row.idea7)
             span
               input(type='text' name='plan7_4' placeholder='실행계획4' value=row.plan7_4)
           div.row
@@ -209,11 +209,14 @@ block content
             span
               input(type='text' name='plan5_5' placeholder='실행계획5' value=row.plan5_5)
       
-      div#btn-list
-        button#init 초기화
-        button#submit(type='submit') 저장
+      div#btn-list        
+        if user
+          button#init 초기화
+          button#submit(type='submit') 저장
+        else
+          button#init 초기화
 
-      input(type='hidden' value=row.obj_id)
+      //- input(type='hidden' value=row.obj_id)
 
   script.
     $(document).ready(() =>{                                    
@@ -223,7 +226,16 @@ block content
                   let arr = $("input[name="+event.target.name+"]");                    
                   arr.map((idx) => arr[idx].value = val );                   
               })
-          });            
+          });
+
+          [].forEach.call($("input:text"), (el) =>{
+                $(el).attr('autocomplete', 'off');
+                $(el).keydown((evt) => {                    
+                    if(evt.keyCode == 13){
+                      return false;
+                    }
+                })
+            });            
 
           $('#init').click((evt)=> {
                 evt.preventDefault();
