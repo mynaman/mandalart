@@ -120,14 +120,14 @@ block content
         div.tbl
           div.row
             span
-              input#right-arrow(type='text' name='plan4_1' placeholder='실행계획1')
+              input(type='text' name='plan4_1' placeholder='실행계획1')
             span
               input(type='text' name='plan4_2' placeholder='실행계획2')
             span
               input(type='text' name='plan4_3' placeholder='실행계획3')
           div.row
             span
-              input(type='text' name='plan4_8' placeholder='실행계획8')
+              input#right-arrow(type='text' name='plan4_8' placeholder='실행계획8')
             span
               input.idea(type='text' name='idea4' placeholder='아이디어4')
             span
@@ -202,15 +202,19 @@ block content
               input(type='text' name='plan5_4' placeholder='실행계획5')
           div.row
             span
-              input(type='text' name='plan5_6' placeholder='실행계획7')
+              input(type='text' name='plan5_7' placeholder='실행계획7')
             span
               input(type='text' name='plan5_6' placeholder='실행계획6')
             span
               input(type='text' name='plan5_5' placeholder='실행계획5')
       
       div#btn-list
-        button#init 초기화
-        button#submit(type='submit') 저장
+        if user
+          button#init 초기화
+          button#submit(type='submit') 저장
+        else
+          button#init 초기화
+
 
   script.
     $(document).ready(() =>{            

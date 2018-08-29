@@ -15,10 +15,15 @@ html
          div#head
             h1 Mandalart
             ul
-              li
-                a#sign-in(href='#') Sign in
-              li
-                a#sign-up(href='#') Sign up
+             if user         
+                li
+                  a#logout(href='/auth/logout') Logout
+             else
+                li
+                  a#sign-in(href='#') Sign in
+                li
+                  a#sign-up(href='#') Sign up
+
 
             div#sign-in-popup
                 form(action='/auth/login' method='post')
@@ -28,7 +33,9 @@ html
                             input(type='email' name='email')
                         br
                         label Password :
-                            input(type='password' name='password'  autocomplete='off')
+                            input(type='password' name='password')
+                        br
+                        .error-message= loginError
                         br
                         button#login(type='submit') login
                         button.close close
@@ -40,11 +47,39 @@ html
                         label Email :
                             input(type='email' name='email')
                         br
-                        label Password :
-                            input(type='password' name='password'  autocomplete='off')
+                        label Password:
+                            input(type='password' name='password')
+                        br
+                        label Password_Cofirm :
+                            input(type='password' name='passwordConfirm')
+                        br
+                        .error-message= joinError 
                         br
                         button#join(type='submit') join
                         button.close close
+
+            
+        script.
+            $('#join').click((evt)=>{
+                
+                if(!$('#sign-up-popup input[name=email]').val()){
+                    evt.preventDefault();
+                    alert('아이디를 입력 해 주세요.');
+                }
+                else if(!$('#sign-up-popup input[name=password]').val()){
+                    evt.preventDefault();
+                    alert('비밀번호를 입력해주세요.');
+                }
+                else if(!$('#sign-up-popup input[name=passwordConfirm]').val()){
+                    evt.preventDefault();
+                    alert('비밀번호 확인의 입력해주세요.');
+                } 
+                else if ($('#sign-up-popup input[name=password]').val() != $('#sign-up-popup input[name=passwordConfirm]').val()){
+                    evt.preventDefault();
+                    alert('비밀번호가 맞지 않습니다.');
+                }
+
+            });
 
         block content
 

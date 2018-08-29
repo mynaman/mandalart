@@ -6,8 +6,7 @@ const { User } = require('../models');
 
 const router = express.Router();
 
-router.get('/', (req, res) =>{    
-    console.log('auth');
+router.get('/', (req, res) =>{        
     res.send(JSON.stringify(req.user));
 });
 
@@ -26,21 +25,37 @@ router.post('/join', isNotLoggedIn, async(req, res, next) => {
             password : hash,
             create_dt : Date.now(),
         });
-        return res.redirect('/auth/login');
+        return res.redirect('/');
     } catch(error) {
         console.error(error);
         return next(error);
     }
 });
 
-router.get('/login', isNotLoggedIn , (req, res) =>{
-    console.log(req.user);
-    res.rend('success');
+router.post('/login', isNotLoggedIn , (req, res, next) =>{
+    passport.authenticate('local', (authError, user, info) => {        
+        if(authError){
+            console.error(authError);
+            return next(authError);
+        }        
+        if(!user){
+            req.flash('loginError', info.message);            
+            return res.redirect('/');
+            
+        }        
+        return req.login(user, (loginError) => {
+            if(loginError){
+                console.error(loginError);
+                return next(loginError);
+            }
+            return res.redirect('/');
+        });
+    })(req, res, next);
 });
 
-router.get('/logout', isLoggedIn , (req, res) =>{
+router.get('/logout', isLoggedIn, (req, res) =>{        
     req.logout();
-    req.session.destory();
+    req.session.destroy();
     res.redirect('/');
 });
 

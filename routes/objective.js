@@ -4,20 +4,16 @@ const objective = require('../util/objective');
 
 const router = express.Router();
 
-
 router.get('/', (req, res) =>{
-    console.log('파라미터가 없는 라우터');
     res.render('objectiveEdit', {});
 });
 
 router.get('/:id', (req, res) =>{    
     const obj_id = req.params.id;
     if(obj_id) {
-        Objective.findOne({ where: {obj_id} })
-                        .then((row) =>{
-                            if(!row) res.send('Not row!');
-                            console.log(row.get());
-                            return res.render('objectiveView', {row : row.get() });
+        Objective.findOne({ where: {obj_id} }).then((row) =>{
+                            if(!row) res.send('Not row!');                            
+                            return res.render('objectiveView', {row : row.get() , user : req.user });
                         })
                         .catch((err) => {
                             console.error(err);
@@ -31,10 +27,8 @@ router.get('/:id', (req, res) =>{
 router.get('/:id/modify', (req, res) =>{    
     const obj_id = req.params.id;
     if(obj_id) {
-        Objective.findOne({ where: {obj_id} })
-                        .then((row) =>{
-                            if(!row) res.send('Not row!');
-                            console.log(row.get());
+        Objective.findOne({ where: {obj_id} }).then((row) =>{
+                            if(!row) res.send('Not row!');                            
                             return res.render('objectiveModify', {row : row.get() });
                         })
                         .catch((err) => {
@@ -47,7 +41,7 @@ router.get('/:id/modify', (req, res) =>{
 });
 
 
-router.post('/', (req, res) => {
+router.post('/', (req, res) => {    
     const obj = objective.create(req);
     Objective.create(obj).then((result) =>{
         if(!result) throw error

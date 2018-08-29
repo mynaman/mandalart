@@ -1,11 +1,13 @@
 const uuidv4 = require('uuid/v4');
 
-const objective = {    
+
+
+const objective = {        
     create(req) {        
         return {
             obj_id : uuidv4(),
-            obj_year : 2018,
-            user_id : 'mynaman85@gmail.com',
+            obj_year : (new Date()).getFullYear(),
+            user_id : req.user.email,
             target : req.body.target,
             idea1 : req.body.idea1[0],
             idea2 : req.body.idea2[0],
